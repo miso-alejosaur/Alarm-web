@@ -1,0 +1,18 @@
+<div class="recover-form">
+  <form class="form-container">
+    <div class="mb-2">
+      <input type="text" placeholder="Nombre" class="form-control name-field">
+    </div>
+    <label><input type="checkbox" class="checkbox"> Desactivar en días festivos</label>
+    <label>Máximo de aplazamientos*</label>
+    <div class="mb-2">
+      <input class="slider" name="aplazamientos" type="range" min="0" max="10">
+      <output for="aplazamientos" onforminput="value = aplazamientos.valueAsNumber;"></output>
+      <mat-slider class="slider" min="0" max="10" step="1" thumbLabel="True" tickInterval="1">
+        <input matSliderThumb>
+      </mat-slider>
+
+    </div>
+    <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+  </form>
+</div>

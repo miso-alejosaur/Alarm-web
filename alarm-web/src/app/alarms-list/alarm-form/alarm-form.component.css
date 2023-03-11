@@ -1,0 +1,32 @@
+.name-field {
+  font-size: x-large;
+  background-color: var(--darkColor);
+  border-radius: 0%;
+  border: 0px;
+  border-bottom: 2px solid var(--lightColor);
+}
+
+.name-field:focus-visible {
+  border: 0px;
+  border-bottom: 2px solid var(--lightColor);
+  box-shadow: none;
+}
+
+.name-field:focus {
+  border: 0px;
+  border-bottom: 2px solid var(--lightColor);
+  box-shadow: none;
+}
+
+.slider {
+  width: 100%;
+}
+
+label {
+  font-size: x-large;
+}
+
+input.checkbox {
+  height: 1em;
+  width: 1em;
+}

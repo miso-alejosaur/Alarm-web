@@ -1,0 +1,99 @@
+@font-face {
+  font-family: Digital7;
+  src: url("assets/DigitalDismay.otf");
+}
+
+/* You can add global styles to this file, and also import other style files */
+* {
+  color: var(--lightColor);
+}
+
+body {
+  background-image: url("assets/darkness.png");
+}
+
+html,
+body {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  height: 100%;
+  margin: 0%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  color: var(--contrastColor);
+}
+
+.btn-primary,
+.btn-primary:hover {
+  background-color: var(--contrastColor);
+  border-color: var(--contrastColor);
+  width: 100%;
+}
+
+.bg-transparent {
+  color: var(--lightColor);
+}
+
+.center-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.smaller-font {
+  font-size: 0.8em;
+}
+
+:root {
+  --darkColor: #303432;
+  --contrastColor: #ab381b;
+  --lightColor: #e3ded8;
+  --darkColorTransparent: rgba(48, 52, 50, 0.35);
+  --darkestDark: #181919;
+}
+
+.icon {
+  height: 1.2rem;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+}
+
+.form-control {
+  background-color: var(--lightColor);
+}
+
+.tooltip .tooltip-inner {
+  background-color: var(--lightColor);
+  border-color: var(--darkColor);
+  border: 2px solid var(--darkColor);
+  color: var(--darkColor);
+}
+
+.tooltip.bs-tooltip-end .tooltip-arrow::before {
+  border-right-color: var(--lightColor);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+#alarm-modal-component {
+  background-color: var(--darkestDark);
+  padding:9%;
+}
+
+.checkbox {
+  accent-color: var(--contrastColor);
+}

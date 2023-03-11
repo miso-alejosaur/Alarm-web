@@ -1,0 +1,15 @@
+<nav class="navbar">
+  <span class="navbar-brand mx-auto h1">Tus Alarmas</span>
+</nav>
+
+<div class="big-container">
+  <div class="alarms-list-container">
+    <div class="alarms-inner-container">
+      <app-alarm-item class="alarm-item" *ngFor="let alarma of alarmsList" [alarm]="alarma"></app-alarm-item>
+    </div>
+  </div>
+</div>
+
+<div (click)="openModal()" class="add-icon-container">
+  <img class="add-icon" src="../../../assets/plus.png">
+</div>

@@ -1,0 +1,55 @@
+.navbar {
+  background-color: var(--darkColor);
+  border-bottom: 3px solid var(--contrastColor);
+  width: 100%;
+  height: 12%;
+  z-index: 100;
+  padding: 0;
+}
+
+.navbar-brand {
+  color: var(--contrastColor);
+  font-size: 8vh;
+}
+
+.alarms-list-container {
+  background-color: var(--darkColorTransparent);
+  width: 40%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.alarms-inner-container {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  padding: 5% 5% 0% 5%;
+}
+
+.big-container {
+  width: 100%;
+  height: 88%;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+.alarm-item {
+  margin-bottom: 5%;
+  display: block;
+}
+
+.add-icon-container {
+  position: fixed;
+  right: 3%;
+  bottom: 5%;
+  width: 7%;
+  box-sizing: border-box;
+}
+
+.add-icon {
+  width: 100%;
+  height: 100%;
+}
+
+

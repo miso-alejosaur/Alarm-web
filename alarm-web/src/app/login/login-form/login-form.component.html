@@ -1,0 +1,22 @@
+<div class="login-container">
+  <div class="login-subcontainer">
+    <img class="logo" src="../../../assets/icon.png">
+    <div class="login-form">
+      <form class="form-container">
+        <H1>Iniciar Sesión</H1>
+        <div class="mb-2">
+          <label class="form-label">Número de celular</label>
+          <input type="tel" class="form-control">
+        </div>
+        <div class="mb-4">
+          <label class="form-label">Contraseña</label>
+          <input type="password" class="form-control">
+        </div>
+        <button (click)="doLogin()" type="submit" class="btn btn-primary">Iniciar Sesión</button>
+        <var class="center-div">
+          <button (click)="doRecover()" class="btn bg-transparent smaller-font">Olvidé mi contraseña</button>
+        </var>
+      </form>
+    </div>
+  </div>
+</div>

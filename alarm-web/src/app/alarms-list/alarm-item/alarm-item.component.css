@@ -1,0 +1,44 @@
+.alarm-container {
+  background-color: var(--darkColor);
+  border: 3px solid var(--contrastColor);
+  border-radius: 10px;
+  padding: 3px;
+}
+
+.hour{
+  font-family: Digital7, Roboto, Arial, sans-serif;
+  font-size: 7vw;
+  color: var(--lightColor);
+  margin: 0%;
+  line-height: 6.5vw;
+}
+
+.alarm-name {
+  color: var(--lightColor);
+}
+
+.wakeup-strategy {
+  max-width: 100%;
+}
+
+.wakeup-partner {
+  max-width: 100%;
+  margin-bottom: 15%;
+}
+
+.strategy-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dows {
+  font-size: small;
+}
+
+.hour-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

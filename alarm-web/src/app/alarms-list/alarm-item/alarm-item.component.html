@@ -1,0 +1,42 @@
+<div class="alarm-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-6 mx-auto hour-name">
+        <div>
+        <h4 class="alarm-name">{{alarm.name}}</h4>
+        <h1 class="hour">{{alarm.hours}}:{{alarm.minutes}}</h1>
+      </div>
+      </div>
+      <div class="col-6">
+        <div class="row" style="height: 100%;">
+          <div class="col-6 strategy-container">
+            <img class="wakeup-strategy" src="../../../assets/iconos-apagado/{{alarm.strategy}}.png">
+          </div>
+          <div class="col-6">
+            <div class="row strategy-container">
+              <div class="col-9">
+                <img class="wakeup-partner" src="../../../assets/iconos-apagado/people-{{alarm.contact ? 1 : 2}}.png" style="height: 60%;">
+                <div class="row" style="height: 40%;">
+                  <div class="col-6 mx-auto">
+                  </div>
+                  <div class="col-6 mx-auto">
+                    <img class="wakeup-strategy" src="../../../assets/iconos-apagado/delete.png">
+                  </div>
+                </div>
+              </div>
+              <div class="col-3 dows">
+                {{alarm.dow[0]}}<br>
+                {{alarm.dow[1]}}<br>
+                {{alarm.dow[2]}}<br>
+                {{alarm.dow[3]}}<br>
+                {{alarm.dow[4]}}<br>
+                {{alarm.dow[5]}}<br>
+                {{alarm.dow[6]}}<br>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
