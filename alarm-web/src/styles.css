@@ -91,9 +91,49 @@ body {
 
 #alarm-modal-component {
   background-color: var(--darkestDark);
-  padding:9%;
+  padding: 3% 9% 3% 9%;
 }
 
 .checkbox {
   accent-color: var(--contrastColor);
+}
+
+.mat-slider.mat-slider-horizontal .mat-slider-wrapper {
+  top: 18px;
+}
+.mat-slider.mat-slider-horizontal .mat-slider-track-wrapper {
+  height: 5px;
+  border-radius: 5px
+}
+.mat-slider.mat-slider-horizontal .mat-slider-track-background,
+.mat-slider.mat-slider-horizontal .mat-slider-track-fill {
+  height: 100%;
+  background-color: var(--lightColor);
+}
+.mat-slider.mat-slider-horizontal .mat-slider-track-fill {
+  background-color: var(--contrastColor);
+}
+.mat-accent .mat-slider-thumb {
+  height: 30px;
+  width: 30px;
+  background-color: var(--contrastColor);
+  border: solid 2px gray;
+  bottom: -15px;
+  right: -20px;
+}
+
+.mat-slider-min-value:not(.mat-slider-thumb-label-showing) .mat-slider-thumb {
+  background-color: var(--contrastColor);
+}
+
+.mat-slider-min-value:not(.mat-slider-sliding) .mat-slider-thumb {
+  background-color: var(--contrastColor);
+}
+
+.mat-slider-thumb-label {
+  background-color: var(--contrastColor) !important;
+}
+
+.nomargin {
+  margin: 0%;
 }

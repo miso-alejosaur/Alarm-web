@@ -1,4 +1,4 @@
-.name-field {
+.alarm-field {
   font-size: x-large;
   background-color: var(--darkColor);
   border-radius: 0%;
@@ -6,13 +6,13 @@
   border-bottom: 2px solid var(--lightColor);
 }
 
-.name-field:focus-visible {
+.alarm-field:focus-visible {
   border: 0px;
   border-bottom: 2px solid var(--lightColor);
   box-shadow: none;
 }
 
-.name-field:focus {
+.alarm-field:focus {
   border: 0px;
   border-bottom: 2px solid var(--lightColor);
   box-shadow: none;
@@ -29,4 +29,109 @@ label {
 input.checkbox {
   height: 1em;
   width: 1em;
+}
+
+.person-icon {
+  font-size: x-large;
+  max-width: 100%;
+  max-height: 2em;
+}
+
+.person-container {
+  background-color: var(--darkColor);
+  padding: 8px;
+  border-radius: 13%;
+}
+
+.turnoff-method {
+  background-color: var(--darkColor);
+  display: flex;
+  align-items: center;
+  border-radius: 10%;
+  justify-content: center;
+}
+
+.turnoff-icon {
+  width: 90%;
+  padding: 10%;
+}
+
+.grid-turnoff {
+  display: grid;
+  grid-template: "a a a a";
+  gap: 0px 8%;
+  padding-left: 4%;
+  padding-right: 4%;
+  margin-top: 5px;
+}
+
+.grid-hour {
+  display: grid;
+  grid-template: "a a a a";
+  gap: 0px 2%;
+  margin-top: 5px;
+}
+
+.grid-dow {
+  display: grid;
+  grid-template: "a a a a a a a";
+  gap: 0px 2%;
+}
+
+.contact-name {
+  padding-right: 2%;
+}
+
+.botonera {
+  padding: 0px;
+}
+
+.btn {
+  border-radius: 5%;
+}
+
+.btn-cancel {
+  background-color: var(--darkColor);
+  color: var(--lightColor);
+  width: 90%;
+}
+
+.mb-2 {
+  margin-top: 1rem;
+}
+
+.digit {
+  background-color: var(--darkColor);
+  display: flex;
+  align-items: center;
+  border-radius: 10%;
+  justify-content: center;
+}
+
+.digit-text {
+  background-color: var(--darkColor);
+  width: 100%;
+  border: none;
+  font-size: 12rem;
+  line-height: 11rem;
+  height: 11rem;
+  text-align: center;
+  font-family: Digital7, Roboto, Arial, sans-serif;
+}
+
+.dow-container {
+  background-color: var(--darkColor);
+  width: 100%;
+  border: none;
+  text-align: center;
+  aspect-ratio : 1 / 1;
+  font-size: large;
+}
+
+.dow-label {
+  width: 100%;
+  aspect-ratio : 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

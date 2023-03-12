@@ -1,18 +1,112 @@
 <div class="recover-form">
   <form class="form-container">
     <div class="mb-2">
-      <input type="text" placeholder="Nombre" class="form-control name-field">
+      <input type="text" placeholder="Nombre" class="form-control alarm-field">
     </div>
-    <label><input type="checkbox" class="checkbox"> Desactivar en días festivos</label>
-    <label>Máximo de aplazamientos*</label>
     <div class="mb-2">
-      <input class="slider" name="aplazamientos" type="range" min="0" max="10">
-      <output for="aplazamientos" onforminput="value = aplazamientos.valueAsNumber;"></output>
-      <mat-slider class="slider" min="0" max="10" step="1" thumbLabel="True" tickInterval="1">
+      <div class="grid grid-hour nomargin">
+        <div class="digit" id="digit-1">
+          <input type="text" class="digit-text" placeholder="0">
+        </div>
+        <div class="digit" id="digit-2">
+          <input type="text" class="digit-text" placeholder="0">
+        </div>
+        <div class="digit" id="digit-3">
+          <input type="text" class="digit-text" placeholder="0">
+        </div>
+        <div class="digit" id="digit-4">
+          <input type="text" class="digit-text" placeholder="0">
+        </div>
+      </div>
+    </div>
+    <div class="mb-2">
+      <div class="grid grid-dow nomargin">
+        <div class="dow-container">
+          <div class="dow-label">
+            L
+          </div>
+        </div>
+        <div class="dow-container">
+          <div class="dow-label">
+            M
+          </div>
+        </div>
+        <div class="dow-container">
+          <div class="dow-label">
+            M
+          </div>
+        </div>
+        <div class="dow-container">
+          <div class="dow-label">
+            J
+          </div>
+        </div>
+        <div class="dow-container">
+          <div class="dow-label">
+            V
+          </div>
+        </div>
+        <div class="dow-container">
+          <div class="dow-label">
+            S
+          </div>
+        </div>
+        <div class="dow-container">
+          <div class="dow-label">
+            D
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mb-2">
+      <label><input type="checkbox" class="checkbox"> Desactivar en días festivos</label>
+    </div>
+    <div class="mb-2" style="margin-bottom: 0px;">
+      <label>Máximo de aplazamientos*</label>
+      <mat-slider class="slider" min="0" max="10" step="1" showTickMarks="False" discrete thumbLabel="True"
+        tickInterval="1">
         <input matSliderThumb>
       </mat-slider>
-
     </div>
-    <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+    <div class="mb-2" style="margin-top: 0rem;">
+      <label>Método de apagado*</label>
+      <div class="grid grid-turnoff nomargin">
+        <div class="turnoff-method">
+          <img class="turnoff-icon" src="../../../assets/iconos-apagado/touch.png">
+        </div>
+        <div class="turnoff-method">
+          <img class="turnoff-icon" src="../../../assets/iconos-apagado/camera.png">
+        </div>
+        <div class="turnoff-method">
+          <img class="turnoff-icon" src="../../../assets/iconos-apagado/barcode.png">
+        </div>
+        <div class="turnoff-method">
+          <img class="turnoff-icon" src="../../../assets/iconos-apagado/nfc.png">
+        </div>
+      </div>
+    </div>
+    <div class="mb-2">
+      <label>Contacto de respaldo</label>
+      <div class="row" style="margin-right: 0px;">
+        <div class="col-11  contact-name">
+          <input type="text" placeholder="Nombre" class="form-control alarm-field">
+        </div>
+        <div class="col-1 person-container" style="display: flex; justify-content: center;
+        align-items: center;">
+          <img class="person-icon" src="../../../assets/contacts.png">
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="row" style="margin-right: 0px;">
+      <div class="col-6">
+      </div>
+      <div class="col-3 botonera">
+        <button type="submit" class="btn btn-cancel">Cancelar</button>
+      </div>
+      <div class="col-3 botonera">
+        <button type="submit" class="btn btn-primary">Guardar</button>
+      </div>
+    </div>
   </form>
 </div>

@@ -18,6 +18,7 @@ export class AlarmsListComponent implements OnInit {
   constructor(public matDialog: MatDialog) { }
 
   ngOnInit(): void {
+    this.openModal();
   }
 
 
