@@ -94,6 +94,26 @@ body {
   padding: 3% 9% 3% 9%;
 }
 
+#photo-modal-component {
+  background-color: var(--darkestDark);
+  padding: 3% 9% 3% 9%;
+}
+
+#nfc-modal-component {
+  background-color: var(--darkestDark);
+  padding: 3% 9% 3% 9%;
+}
+
+#contact-modal-component {
+  background-color: var(--darkestDark);
+  padding: 3% 9% 3% 9%;
+}
+
+#barcode-modal-component {
+  background-color: var(--darkestDark);
+  padding: 3% 9% 3% 9%;
+}
+
 .checkbox {
   accent-color: var(--contrastColor);
 }
@@ -136,4 +156,8 @@ body {
 
 .nomargin {
   margin: 0%;
+}
+
+.clickable {
+  cursor: pointer;
 }
