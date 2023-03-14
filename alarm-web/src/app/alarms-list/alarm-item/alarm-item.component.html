@@ -4,7 +4,7 @@
       <div class="col-6 mx-auto hour-name">
         <div>
         <h4 class="alarm-name">{{alarm.name}}</h4>
-        <h1 class="hour">{{alarm.hours}}:{{alarm.minutes}}</h1>
+        <h1 class="hour">{{alarm.hours < 10 ? 0 : ''}}{{alarm.hours}}:{{alarm.minutes < 10 ? 0 : ''}}{{alarm.minutes}}</h1>
       </div>
       </div>
       <div class="col-6">

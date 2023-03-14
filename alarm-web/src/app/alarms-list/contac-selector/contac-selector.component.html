@@ -1,0 +1,12 @@
+<div class="methods-container">
+  <label class="select-title">Seleccione un contacto de respaldo</label>
+  <div class="row clickable" (click)="closeModal()" style="margin-right: 0px; width: 100%; margin-bottom: 1rem;" *ngFor="let contact of contacts">
+    <div class="col-1 person-container" style="display: flex; justify-content: center;
+    align-items: center;">
+      <img class="person-icon" src="../../../assets/user.png">
+    </div>
+    <div class="col-11 contact-name">
+      <p disabled type="text" (click)="closeModal()" class="form-control alarm-field">{{contact}}</p>
+    </div>
+  </div>
+</div>

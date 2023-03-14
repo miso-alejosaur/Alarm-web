@@ -4,6 +4,7 @@
   border-radius: 0%;
   border: 0px;
   border-bottom: 2px solid var(--lightColor);
+  color: var(--lightColor);
 }
 
 .alarm-field:focus-visible {
@@ -74,8 +75,10 @@ input.checkbox {
 
 .grid-dow {
   display: grid;
-  grid-template: "a a a a a a a";
+  grid-template-columns: repeat(7, minmax(0, 1fr));
   gap: 0px 2%;
+  align-items: center;
+  justify-content: center;
 }
 
 .contact-name {
@@ -119,19 +122,11 @@ input.checkbox {
   font-family: Digital7, Roboto, Arial, sans-serif;
 }
 
-.dow-container {
-  background-color: var(--darkColor);
-  width: 100%;
-  border: none;
-  text-align: center;
-  aspect-ratio : 1 / 1;
-  font-size: large;
+.turnoff-method:hover {
+  cursor: pointer;
+  background-color: var(--contrastColor);
 }
 
-.dow-label {
-  width: 100%;
-  aspect-ratio : 1 / 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.selected-method {
+  background-color: var(--contrastColor);
 }

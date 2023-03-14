@@ -1,0 +1,43 @@
+.grid-method {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0px 2%;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.methods-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+}
+
+.select-title {
+  font-size: x-large;
+  margin-bottom: 2rem;
+}
+
+.select-label {
+  font-size: large;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.method-img {
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.select-option {
+  border-radius: 0% 0% 4% 4%;
+}
+
+.select-option:hover {
+  background-color: var(--contrastColor);
+}

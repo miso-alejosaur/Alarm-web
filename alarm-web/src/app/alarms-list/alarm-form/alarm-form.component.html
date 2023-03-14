@@ -1,61 +1,33 @@
 <div class="recover-form">
   <form class="form-container">
     <div class="mb-2">
-      <input type="text" placeholder="Nombre" class="form-control alarm-field">
+      <input type="text" placeholder="Nombre" value="{{alarm!.name}}" class="form-control alarm-field">
     </div>
     <div class="mb-2">
       <div class="grid grid-hour nomargin">
         <div class="digit" id="digit-1">
-          <input type="text" class="digit-text" placeholder="0">
+          <input type="text" class="digit-text" value="{{alarm!.hours < 0 ? null : (alarm!.hours < 10 ? 0 : (alarm!.hours - (alarm!.hours % 10))/10)}}" placeholder="0">
         </div>
         <div class="digit" id="digit-2">
-          <input type="text" class="digit-text" placeholder="0">
+          <input type="text" class="digit-text" value="{{alarm!.hours < 0 ? null : (alarm!.hours % 10)}}" placeholder="0">
         </div>
         <div class="digit" id="digit-3">
-          <input type="text" class="digit-text" placeholder="0">
+          <input type="text" class="digit-text" value="{{alarm!.minutes < 0 ? null : (alarm!.minutes < 10 ? 0 : (alarm!.minutes - (alarm!.minutes % 10))/10)}}" placeholder="0">
         </div>
         <div class="digit" id="digit-4">
-          <input type="text" class="digit-text" placeholder="0">
+          <input type="text" class="digit-text" value="{{alarm!.minutes < 0 ? null : (alarm!.minutes % 10)}}" placeholder="0">
         </div>
       </div>
     </div>
     <div class="mb-2">
       <div class="grid grid-dow nomargin">
-        <div class="dow-container">
-          <div class="dow-label">
-            L
-          </div>
-        </div>
-        <div class="dow-container">
-          <div class="dow-label">
-            M
-          </div>
-        </div>
-        <div class="dow-container">
-          <div class="dow-label">
-            M
-          </div>
-        </div>
-        <div class="dow-container">
-          <div class="dow-label">
-            J
-          </div>
-        </div>
-        <div class="dow-container">
-          <div class="dow-label">
-            V
-          </div>
-        </div>
-        <div class="dow-container">
-          <div class="dow-label">
-            S
-          </div>
-        </div>
-        <div class="dow-container">
-          <div class="dow-label">
-            D
-          </div>
-        </div>
+        <app-dow-selector [dow]="'L'" [selected]="alarm!.dow[0] =='L'"></app-dow-selector>
+        <app-dow-selector [dow]="'M'" [selected]="alarm!.dow[1] =='M'"></app-dow-selector>
+        <app-dow-selector [dow]="'M'" [selected]="alarm!.dow[2] =='M'"></app-dow-selector>
+        <app-dow-selector [dow]="'J'" [selected]="alarm!.dow[3] =='J'"></app-dow-selector>
+        <app-dow-selector [dow]="'V'" [selected]="alarm!.dow[4] =='V'"></app-dow-selector>
+        <app-dow-selector [dow]="'S'" [selected]="alarm!.dow[5] =='S'"></app-dow-selector>
+        <app-dow-selector [dow]="'D'" [selected]="alarm!.dow[6] =='D'"></app-dow-selector>
       </div>
     </div>
     <div class="mb-2">
@@ -71,23 +43,23 @@
     <div class="mb-2" style="margin-top: 0rem;">
       <label>Método de apagado*</label>
       <div class="grid grid-turnoff nomargin">
-        <div class="turnoff-method">
-          <img class="turnoff-icon" src="../../../assets/iconos-apagado/touch.png">
+        <div class="turnoff-method" [ngClass]="alarm!.strategy == 'touch' ? 'selected-method' : ''">
+          <img class="turnoff-icon" (click)="openTouchModal()" src="../../../assets/iconos-apagado/touch.png">
         </div>
-        <div class="turnoff-method">
-          <img class="turnoff-icon" src="../../../assets/iconos-apagado/camera.png">
+        <div class="turnoff-method" [ngClass]="alarm!.strategy == 'camera' ? 'selected-method' : ''">
+          <img class="turnoff-icon" (click)="openCameraModal()" src="../../../assets/iconos-apagado/camera.png">
         </div>
-        <div class="turnoff-method">
-          <img class="turnoff-icon" src="../../../assets/iconos-apagado/barcode.png">
+        <div class="turnoff-method" [ngClass]="alarm!.strategy == 'barcode' ? 'selected-method' : ''">
+          <img class="turnoff-icon" (click)="openBarcodeModal()" src="../../../assets/iconos-apagado/barcode.png">
         </div>
-        <div class="turnoff-method">
-          <img class="turnoff-icon" src="../../../assets/iconos-apagado/nfc.png">
+        <div class="turnoff-method" [ngClass]="alarm!.strategy == 'nfc' ? 'selected-method' : ''">
+          <img class="turnoff-icon" (click)="openNfcModal()" src="../../../assets/iconos-apagado/nfc.png">
         </div>
       </div>
     </div>
     <div class="mb-2">
       <label>Contacto de respaldo</label>
-      <div class="row" style="margin-right: 0px;">
+      <div class="row clickable" (click)="openContactModal()" style="margin-right: 0px;">
         <div class="col-11  contact-name">
           <input type="text" placeholder="Nombre" class="form-control alarm-field">
         </div>

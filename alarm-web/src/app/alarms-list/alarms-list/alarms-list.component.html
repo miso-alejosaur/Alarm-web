@@ -5,7 +5,7 @@
 <div class="big-container">
   <div class="alarms-list-container">
     <div class="alarms-inner-container">
-      <app-alarm-item class="alarm-item" *ngFor="let alarma of alarmsList" [alarm]="alarma"></app-alarm-item>
+      <app-alarm-item class="alarm-item clickable" (click)="openAlarmModal(alarma)" *ngFor="let alarma of alarmsList" [alarm]="alarma"></app-alarm-item>
     </div>
   </div>
 </div>

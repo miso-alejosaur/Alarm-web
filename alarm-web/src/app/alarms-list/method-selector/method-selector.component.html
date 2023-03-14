@@ -1,0 +1,9 @@
+<div class="methods-container">
+    <label class="select-title">{{title}}</label>
+  <div class="grid grid-method nomargin">
+    <div (click)="closeModal()" class="clickable select-option" *ngFor="let item of elements | keyvalue">
+      <img src={{item.value}} class="method-img">
+      <p class="select-label" >{{item.key}}</p>
+    </div>
+  </div>
+</div>

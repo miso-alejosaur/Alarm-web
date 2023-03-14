@@ -45,6 +45,7 @@
   bottom: 5%;
   width: 7%;
   box-sizing: border-box;
+  cursor: pointer;
 }
 
 .add-icon {
